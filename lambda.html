@@ -1,0 +1,97 @@
+<body style="background-color: #1C2833; color: whitesmoke;">
+<div style="display: flex; flex-direction: row;">
+<h1 >Intro to AWS Lambda</h1> 
+<img src="lambda.svg.png" height="50" width="50" alt="Italian Trulli" style="margin-top: 8; margin-left: 20;">
+</div>
+<hr width="400" align="left">
+<br><br>
+<div style="display: flex; flex-direction: row; width: auto; flex-wrap: auto;">
+<div>
+<h2 style="font-style: oblique;">Contents</h2>
+<ul style="font-size: xx-large; width: 350; cursor: pointer;">
+<li onclick="what()">Lambda: What?</li>
+<li onclick="why()">Lambda: Why?</li>
+<li onclick="limitations()">Limitations</li>
+<li onclick="pricing()">Pricing</li>
+<li>Demo</li>
+</ul>
+</div>
+<div class="vl"></div>
+<style>
+    .vl {
+      border-left: 6px solid whitesmoke;
+      height: 500px;
+    }
+    </style>
+<div>
+<div style="display: flex; flex-direction: column; flex-wrap: wrap;">
+    <div id="container" style="width: auto; padding:8; margin-left: 80; 
+    font-family: Arial, Helvetica, sans-serif; font-size: xx-large; line-height: 2;">
+    </div>
+<div id="what" hidden>
+<div>
+    <span style="font-style: oblique; font-family:none; font-weight: bold;">Lambda: What?</span><br>
+    <ul>
+    <li>Lambda is a <i style="font-weight: bold; color: #F7DC6F ;">serverless</i> compute service that lets you run code without provisioning or managing servers</li>
+    <li>It is a virtual function, runs for short period of time and runs on demand</li>
+    </ul>
+</div>
+<hr>
+</div>
+<div id="why" hidden>
+<div>
+    <span style="font-style: oblique; font-family:none; font-weight: bold;">Lambda: Why?</span><br>
+    <ul>
+    <li>No servers to manage</li>
+    <li>Continuous scaling(auto scaling)</li>
+    <li>Consistent performance at any scale</li>
+    <li>Integrated with different services(eg Dynamodb, SQS, S3)</li>
+    <li>Integrated with many programming languages(eg Java, Go, PowerShell, Node. js, C#, Python, and Ruby)</li>
+</ul>
+</div>
+<hr>
+</div>
+<div id="limitations" hidden>
+<div>
+    <span style="font-style: oblique; font-family:none; font-weight: bold;">Limitations</span><br>
+    <ul>
+    <li>Function Memory allocation: 128MB-10GB</li>
+    <li>Maximum execution time 900sec(15 mins)</li>
+    <li>Function environment variables(4kb)</li>
+    <li>/tmp directory storage(512 MB)</li>
+    <li>Concurrent execution 1000(Can be increased up to Hundreds of thousands)</li>
+    <li>Function deployment size(compressed .zip): 50MB</li>
+    <li>Size of uncompressed deployment(code + dependencies): 250MB</li>
+    </ul>
+</div>
+<hr>
+</div>
+<div id="pricing" hidden>
+<div>
+    <span style="font-style: oblique; font-family:none; font-weight: bold;">Pricing</span><br>
+    <ul>
+        <li>Pay per request and compute time</li>
+        <li>Free tier of 1,000,000 AWS Lambda requests and 400,000 GBs of compute time</li>
+    </ul>
+</div>
+<hr>
+</div>
+</div>
+
+</div>
+</body>
+<script>
+    let what = () => {
+        document.getElementById("container").innerHTML = document.getElementById("what").innerHTML;
+    }
+
+    let why = () => {
+        document.getElementById("container").innerHTML = document.getElementById("why").innerHTML;
+    }
+    let limitations = () => {
+        document.getElementById("container").innerHTML = document.getElementById("limitations").innerHTML;
+    }
+    let pricing = () => {
+        document.getElementById("container").innerHTML = document.getElementById("pricing").innerHTML;
+    }
+</script>
