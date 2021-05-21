@@ -1,7 +1,7 @@
 <body style="background-color: #1C2833; color: whitesmoke;">
     <div style="display: flex; flex-direction: row;">
         <h1>Intro to AWS Lambda</h1>
-        <img src="lambda.svg.png" height="50" width="50" alt="Italian Trulli" style="margin-top: 8; margin-left: 20;">
+        <img src="media/lambda.svg.png" height="50" width="50" alt="Italian Trulli" style="margin-top: 8; margin-left: 20;">
     </div>
     <hr width="400" align="left">
     <br><br>
@@ -13,20 +13,20 @@
                 <li onclick="invoke('why')">Lambda: Why?</li>
                 <li onclick="invoke('limitations')">Limitations</li>
                 <li onclick="invoke('pricing')">Pricing</li>
-                <li>Demo</li>
+                <li onclick="invoke('demo')">Demo</li>
             </ul>
         </div>
         <div class="vl"></div>
         <style>
             .vl {
-                border-left: 6px solid whitesmoke;
+                border-left: 6px solid #E67E22;
                 height: 500px;
             }
         </style>
         <div>
             <div style="display: flex; flex-direction: column; flex-wrap: wrap;">
                 <div id="container" style="width: auto; padding:8; margin-left: 80; 
-                font-family: Arial, Helvetica, sans-serif; font-size: xx-large; line-height: 2;">
+                font-family: Arial, Helvetica, sans-serif; font-size: xx-large; line-height: 2; height: auto;">
                 </div>
                 <div id="what" hidden>
                     <div>
@@ -75,6 +75,20 @@
                             <li>Pay per request and compute time</li>
                             <li>Free tier of 1,000,000 AWS Lambda requests and 400,000 GBs of compute time</li>
                         </ul>
+                    </div>
+                    <hr>
+                </div>
+                <div id="demo" hidden>
+                    <div>
+                        <span style="font-style: oblique; font-family:none; font-weight: bold;">DEMO</span><br>
+                        Goal: Log name of the file which is uploaded to s3
+                        <ul style="font-size: large">
+                            <li>Create lambda function using terraform</li>
+                            <li>Add s3 trigger to invoke lambda</li>
+                            <li>Upload file in s3 bucket</li>
+                            <li>Check cloudwatch logs to see file name</li>
+                        </ul>
+                        <img src="media/product-page-diagram.png" height="auto" width="auto" alt="Italian Trulli" style="margin-top: 8; margin-left: 20;">
                     </div>
                     <hr>
                 </div>
